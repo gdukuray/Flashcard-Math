@@ -36,34 +36,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="322dp"
+        android:layout_marginTop="169dp"
         android:layout_marginEnd="322dp"
         android:text="Equation"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="169dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtYourAnswer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="182dp"
+        android:layout_marginTop="234dp"
         android:text="Your Answer:"
         android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
-        tools:layout_editor_absoluteX="182dp"
-        tools:layout_editor_absoluteY="234dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/txtUserAnswer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="322dp"
+        android:layout_marginTop="224dp"
         android:layout_marginEnd="196dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Your Answer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="224dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtFooterMessage"
