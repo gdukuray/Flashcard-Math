@@ -74,7 +74,7 @@
         android:layout_marginStart="141dp"
         android:layout_marginEnd="142dp"
         android:layout_marginBottom="60dp"
-        android:text="<Insert Text>"
+        android:text="Insert Text"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
