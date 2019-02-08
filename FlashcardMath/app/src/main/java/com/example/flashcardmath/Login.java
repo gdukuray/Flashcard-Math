@@ -32,9 +32,11 @@ public class Login extends AppCompatActivity {
                 user = userInput.getText().toString();
                 pass = passInput.getText().toString();
 
-                if (pass==hardPass && user==hardUser) {
+                if (pass.equals(hardPass) && user.equals(hardUser)) {
                     Toast.makeText(getBaseContext(), "Login Success!", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(Login.this, MainActivity.class));
+                    Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                    i.putExtra("secretVal", "YAY");
+                    startActivity(i);
                 }
                 else
                     Toast.makeText(getBaseContext(),"Please try again", Toast.LENGTH_LONG).show();
