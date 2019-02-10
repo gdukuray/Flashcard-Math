@@ -3,6 +3,9 @@ package com.example.flashcardmath;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import java.util.Random;
+
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -10,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView tvMsg;
     private TextView txtFormula;
+    private Button nextProblem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +38,15 @@ public class MainActivity extends AppCompatActivity {
         txtFormula = (TextView) findViewById(R.id.txtFormula);
         String equ = genEqt();
         txtFormula.setText(equ);
+
+        nextProblem = (Button) findViewById(R.id.nextProblem);
+        nextProblem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               txtFormula.setText(genEqt());
+            }
+        });
+
 
     }
 
