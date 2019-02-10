@@ -9,6 +9,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private TextView tvMsg;
+    private TextView txtFormula;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         tvMsg = (TextView) findViewById(R.id.txtFooterMessage);
         String secretMsg;
+
 
         Bundle bundle = getIntent().getExtras();
         secretMsg = bundle.getString("secretVal");  //TRUE OR FALSE: The parameter in quotes, is the key to the Bundle/Hashmap?
@@ -29,6 +31,36 @@ public class MainActivity extends AppCompatActivity {
        // Random rnd = new Random();
         //int[] intArray = rnd.ints(30, 0, 9).toArray();
 
+        txtFormula = (TextView) findViewById(R.id.txtFormula);
+        String equ = genEqt();
+        txtFormula.setText(equ);
 
     }
+
+    //generate equations
+    public static String genEqt()
+    {
+        int s = 0;
+        String[] symbol = {"+","-","*"};
+        String result ="";
+        for(int i = 0; i<6; i++)
+        {
+            if(i%2 == 0)
+            {
+                result += Integer.toString((int)(Math.random()*10));
+            }//number
+            if(i%2 == 1 && i!=5)
+            {
+                s = (int)(Math.random()*3);
+                result += symbol[s];
+            }//add, minus, mult, divide
+            if(i == 5)
+            {
+                result+="=";
+            }
+        }
+        return result;
+    }
 }
+
+
