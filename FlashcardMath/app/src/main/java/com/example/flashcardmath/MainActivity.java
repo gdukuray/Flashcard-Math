@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 s = (int)(Math.random()*3);
                 result += symbol[s];
-            }//add, minus, mult, divide
+            }//add, minus, multiply, divide
             if(i == 5)
             {
                 result+="=";
