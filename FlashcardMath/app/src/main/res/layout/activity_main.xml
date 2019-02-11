@@ -82,6 +82,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+<<<<<<< HEAD
     <TextView
         android:id="@+id/trackans"
         android:layout_width="wrap_content"
@@ -93,4 +94,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+=======
+>>>>>>> 56324d13319fae5adcb3e2eaa135cf990fd75f04
 </android.support.constraint.ConstraintLayout>
