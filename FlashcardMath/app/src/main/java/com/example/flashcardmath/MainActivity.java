@@ -31,10 +31,10 @@ public class MainActivity extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         secretMsg = bundle.getString("secretVal");  //TRUE OR FALSE: The parameter in quotes, is the key to the Bundle/Hashmap?
-        secretMsg = "Secret Message From Activity 1: " + secretMsg;
+        secretMsg = "Welcome " + secretMsg;
 
         tvMsg.setText(secretMsg);  //QUESTION: Is this the Key or Value?
-        Toast.makeText(MainActivity.this, "The Login activity sent me a Secret Value = " + secretMsg , Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this, secretMsg , Toast.LENGTH_LONG).show();
 
 
        // Random rnd = new Random();

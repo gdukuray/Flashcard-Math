@@ -35,7 +35,7 @@ public class Login extends AppCompatActivity {
                 if (pass.equals(hardPass) && user.equals(hardUser)) {
                     Toast.makeText(getBaseContext(), "Login Success!", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(getApplicationContext(), MainActivity.class);
-                    i.putExtra("secretVal", "YAY");
+                    i.putExtra("secretVal", user);
                     startActivity(i);
                 }
                 else
