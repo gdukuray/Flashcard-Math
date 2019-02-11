@@ -1,10 +1,9 @@
 package com.example.flashcardmath;
 
+import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import java.util.Random;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -27,7 +26,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
+            setContentView(R.layout.main_land);
+        }
+        else if (this.getResources().getConfiguration().orientation ==Configuration.ORIENTATION_PORTRAIT) {
+            setContentView(R.layout.main_port);
+        }
+
 
         tvMsg = (TextView) findViewById(R.id.txtFooterMessage);
         String secretMsg;
@@ -80,6 +86,31 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putString("user answer",txtUserAnswer.getText().toString());
+        outState.putString("random fomula",txtFormula.getText().toString());
+        outState.putString("score info",tvMsg.getText().toString());
+        super.onSaveInstanceState(outState);
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        String score_info;
+        String random_fomula;
+        String user_answer;
+
+        score_info = savedInstanceState.getString("score info");
+        random_fomula = savedInstanceState.getString("random fomula");
+        user_answer = savedInstanceState.getString("user answer");
+
+        tvMsg.setText(score_info);
+        txtUserAnswer.setText(user_answer);
+        txtFormula.setText(random_fomula);
     }
 
     //return int answer from a String equation

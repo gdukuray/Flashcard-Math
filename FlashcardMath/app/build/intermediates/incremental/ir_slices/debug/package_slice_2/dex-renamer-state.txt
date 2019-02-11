@@ -1,0 +1,4 @@
+#Mon Feb 11 15:31:20 EST 2019
+base.0=D\:\\AndroidStudioProjects\\assignment3\\Flashcard-Math\\FlashcardMath\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+path.0=classes.dex
+renamed.0=classes.dex
